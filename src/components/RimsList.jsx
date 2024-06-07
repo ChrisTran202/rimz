@@ -11,52 +11,52 @@ import img10 from'../assets/images/10.jpg'
 
 export const RimsImages = [
   {
-    title: 'Rim 1',
+    title: 'RAYS - CE28N-plus',
     id: 1,
     img: img1
   },
   {
-    title: 'Rim 2',
+    title: 'KANSEI - KNP',
     id: 2,
     img: img2
   },
   {
-    title: 'Rim 3',
+    title: 'KANSEI - CORSA',
     id: 3,
     img: img3
   },
   {
-    title: 'Rim 4',
+    title: 'KANSEI - ROKU',
     id: 4,
     img: img4
   },
   {
-    title: 'Rim 5',
+    title: 'KANSEI - KNP',
     id: 5,
     img: img5
   },
   {
-    title: 'Rim 6',
+    title: 'RAYS - NE24 club sport',
     id: 6,
     img: img6
   }, 
   {
-    title: 'Rim 7',
+    title: 'RAYS - TE37 SAGA S-plus',
     id: 7,
     img: img7
   },
   {
-    title: 'Rim 8',
+    title: 'RAYS - TE37 ultra X',
     id: 8,
     img: img8
   },
   {
-    title: 'Rim 9',
+    title: 'RAYS - TE37 ultra LARGE P.C.D. M-SPEC',
     id: 9,
     img: img9
   },
   {
-    title: 'Rim 10',
+    title: 'RAYS - ZE40',
     id: 10,
     img: img10
   }
@@ -64,16 +64,16 @@ export const RimsImages = [
 
 
 
-function RimsList() {
+function  RimsList() {
 
   return (
-    <div className='flex justify-center'>
+    <div className='flex justify-center h-auto'>
       <div className='bg-[rgb(255,255,255)] w-[70vw] rounded-2xl  '>
-        <div className='flex flex-col grid grid-cols-3 '>
+        <div className='flex flex-col grid grid-cols-2 sm:grid-cols-3 gap-4 p-5 justify-center content-center '>
           { RimsImages.map((rim) => (
-          <div key={rim.id} className='text-center text-xl font-semibold '>
-            <img src={rim.img} alt={rim.title} className='h-[30vh] flex justify-center '/>
-            <h1>{rim.title}</h1>
+          <div key={rim.id} className=' flex flex-col text-center contents-center  text-xl font-semibold hover:scale-110 transition-all duration-500 cursor-pointer '>
+            <img src={rim.img} alt={rim.title} className='h-[vh] w-[30vw] flex justify-center '/>
+            <h1 className='text-[.7em] sm:text-[1.2rem]'>{rim.title}</h1>
           </div>
         )) }
         </div>
