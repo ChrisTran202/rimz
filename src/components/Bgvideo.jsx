@@ -1,4 +1,4 @@
-import Clip from '../assets/clips/clip.mp4'
+
 
 const Bgvideo = () => {
   return (

@@ -1,14 +1,10 @@
-
-import React from 'react'
-
+import logo from '../assets/images/wheellogo.png'
 const Nav = () => {
   return (
     <div>
-      <div className='text-center'>
-        <h1 className='text-5xl font-bold text-white'>
-          Rimz
-        </h1>
-        <h2 className='text-1xl text-white'>
+      <div className='flex flex-col items-center text-center'>
+        <img src={logo} alt="logo" className='w-80' />
+        <h2 className='text-1.5xl font-bold text-white'>
           Make it look good, going fast!
         </h2>
       </div>
