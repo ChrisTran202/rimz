@@ -1,4 +1,4 @@
-import Clip from '../assets/clips/rimzclipz.mp4'
+import Clip from '../assets/clips/rimzclipz-2.mp4'
 
 const Bgvideo = () => {
   return (
