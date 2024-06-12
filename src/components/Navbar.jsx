@@ -19,9 +19,9 @@ const Navbar = () => {
   ];
 
   return (
-    <div className='bg-[RGBA(0,0,0,.40)] flex justify-between items-center h-24 max-w-[1500px] mx-auto px-4 text-white z-30 sticky top-0  '>
+    <div className='bg-[RGBA(0,0,0,.40)] flex justify-between items-center h-24 max-auto mx-auto px-4 text-white z-30 sticky top-0  '>
       {/* Logo */}
-      <h1 className='w-[18%] text-3xl font-bold text-[#df0000]'><img src={logo} alt="logo" /></h1>
+      <h1 className='w-[30vw] md:w-[15vw]  text-3xl font-bold text-[#df000000]'><img src={logo} alt="logo" /></h1>
 
       {/* Desktop Navigation */}
       <ul className='hidden md:flex'>
@@ -36,8 +36,8 @@ const Navbar = () => {
       </ul>
 
       {/* Mobile Navigation Icon */}
-      <div onClick={handleNav} className='block md:hidden bg-red-500 p-4 rounded-xl'>
-        {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
+      <div onClick={handleNav} className='block md:hidden bg-[#ff454570] p-4 rounded-xl fflex items-center justify-center  '>
+        {nav ? <AiOutlineClose size={20}  /> : <AiOutlineMenu size={20} />}
       </div>
 
       {/* Mobile Navigation Menu */}
@@ -49,7 +49,7 @@ const Navbar = () => {
         }
       >
         {/* Mobile Logo */}
-        <h1 className='w-full text-3xl font-bold text-[#df0000] m-4'>REACT.</h1>
+        <h1 className='w-full text-3xl font-bold text-[#df0000] m-4'><img src={logo} alt="logo" /></h1>
 
         {/* Mobile Navigation Items */}
         {navItems.map(item => (
