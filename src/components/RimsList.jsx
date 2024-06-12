@@ -68,7 +68,7 @@ function  RimsList() {
 
   return (
     <div className=' flex justify-center mt-[3rem] md:mt-[8rem] lg:mt-[20rem] p-10'>
-      <div className='bg-[rgb(255,255,255)] w-[70vw] rounded-2xl pt-5 '>
+      <div className='bg-[rgb(255,255,255)] w-[70vw] rounded-2xl pt-5 border-red-900 border-2 '>
         <div className=' flex-col grid grid-cols-2 sm:grid-cols-3 gap-4 p-5 pt-10   justify-center content-center '>
           { RimsImages.map((rim) => (
           <div key={rim.id} className=' flex flex-col text-center contents-center  text-xl font-semibold hover:scale-110 transition-all duration-500 ease-out cursor-pointer '>

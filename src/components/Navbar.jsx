@@ -21,14 +21,14 @@ const Navbar = () => {
   return (
     <div className='bg-[RGBA(0,0,0,.40)] flex justify-between items-center h-24 max-auto mx-auto px-4 text-white z-30 sticky top-0  '>
       {/* Logo */}
-      <h1 className='w-[30vw] md:w-[15vw]  text-3xl font-bold text-[#df000000]'><img src={logo} alt="logo" /></h1>
+      <h1 className='w-[30vw] md:w-[15vw] '><img src={logo} alt="logo" /></h1>
 
       {/* Desktop Navigation */}
-      <ul className='hidden md:flex'>
+      <ul className='hidden md:flex '>
         {navItems.map(item => (
           <li
             key={item.id}
-            className='p-4 hover:bg-[#ff4444] rounded-xl m-2 cursor-pointer duration-400 hover:scale-200 ease-in-out text-[1.2rem] xl:text-2xl font-bold text-red-900 hover:text-white'
+            className='p-4 hover:bg-[#ff4444] rounded-xl m-2 cursor-pointer duration-400 hover:scale-200 ease-in-out text-[1.8rem] xl:text-5xl font-bold text-red-900 hover:text-white'
           >
             {item.text}
           </li>
@@ -49,13 +49,13 @@ const Navbar = () => {
         }
       >
         {/* Mobile Logo */}
-        <h1 className='w-full text-3xl font-bold text-[#df0000] m-4'><img src={logo} alt="logo" /></h1>
+        <h1 className='w-full text-3xl  text-[#df0000] m-4'><img src={logo} alt="logo" /></h1>
 
         {/* Mobile Navigation Items */}
         {navItems.map(item => (
           <li
             key={item.id}
-            className='p-4 border-b rounded-xl font-bold text-red-900 hover:bg-[#df0000] duration-300 hover:text-white cursor-pointer border-gray-600'
+            className='p-4 border-b rounded-xl text-[30px]  text-red-900 hover:bg-[#df0000] duration-300 hover:text-white cursor-pointer border-gray-600'
           >
             {item.text}
           </li>
