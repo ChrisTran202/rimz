@@ -28,7 +28,7 @@ const Navbar = () => {
         {navItems.map(item => (
           <li
             key={item.id}
-            className='p-4 hover:bg-[#ff4444] rounded-xl m-2 cursor-pointer duration-400 hover:scale-200 ease-in-out md:text:1xl xl:text-2xl hover:text-white'
+            className='p-4 hover:bg-[#ff4444] rounded-xl m-2 cursor-pointer duration-400 hover:scale-200 ease-in-out text-[1.2rem] xl:text-2xl font-bold text-red-900 hover:text-white'
           >
             {item.text}
           </li>
@@ -36,7 +36,7 @@ const Navbar = () => {
       </ul>
 
       {/* Mobile Navigation Icon */}
-      <div onClick={handleNav} className='block md:hidden bg-[#ff454570] p-4 rounded-xl fflex items-center justify-center  '>
+      <div onClick={handleNav} className='block md:hidden bg-[#ff454570] p-4 rounded-xl  items-center justify-center  '>
         {nav ? <AiOutlineClose size={20}  /> : <AiOutlineMenu size={20} />}
       </div>
 
@@ -55,7 +55,7 @@ const Navbar = () => {
         {navItems.map(item => (
           <li
             key={item.id}
-            className='p-4 border-b rounded-xl hover:bg-[#df0000] duration-300 hover:text-white cursor-pointer border-gray-600'
+            className='p-4 border-b rounded-xl font-bold text-red-900 hover:bg-[#df0000] duration-300 hover:text-white cursor-pointer border-gray-600'
           >
             {item.text}
           </li>
