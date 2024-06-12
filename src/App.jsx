@@ -1,6 +1,6 @@
 import './App.css'
 import Bgvideo from './components/Bgvideo'
-import Nav from './components/Nav'
+import Navbar from './components/Navbar'
 import RimsList from './components/RimsList'
 
 
@@ -9,7 +9,7 @@ function App() {
 
   return (
     <>
-    <Nav/>
+    <Navbar/>
     <Bgvideo />
     <RimsList />
     
