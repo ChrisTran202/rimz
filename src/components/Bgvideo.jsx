@@ -4,20 +4,9 @@ const Bgvideo = () => {
   return (
     
       <div className=" flex flex-row items-center playsinline justify-center overflow-auto  container-lg:block h-[30vh] ">
-        {/* <video  autoPlay muted loop className='w-[100vw] absolute z-10 playsinline'>
+        <video  autoPlay muted loop playsInline className='w-[100vw] absolute z-10'>
           <source src={Clip} type="video/mp4" />
-        </video> */}
-        <video 
-          autoPlay 
-          muted 
-          loop 
-          className='w-[100vw] absolute z-10 playsinline'
-          controlsList="nodownload"
-          controls={false} // or simply omit this line if not needed elsewhere
-        >
-          <source src={Clip} type="video/mp4" />
-</video>
-        
+        </video>
       </div>
     
     
