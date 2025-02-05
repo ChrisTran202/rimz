@@ -19,7 +19,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className='bg-[RGBA(0,0,0,.40)] flex justify-between items-center h-24 max-auto mx-auto px-4 text-white z-30 sticky top-0  '>
+    <div className='bg-[RGBA(0,0,0,.40)] flex justify-between items-center h-22 max-auto mx-auto px-4 text-white z-30 sticky top-0  '>
       {/* Logo */}
       <h1 className='w-[30vw] md:w-[15vw] '><img src={logo} alt="logo" /></h1>
 
