@@ -24,7 +24,7 @@ const Navbar = () => {
       <h1 className='w-[30vw] md:w-[15vw] '><img src={logo} alt="logo" /></h1>
 
       {/* Desktop Navigation */}
-      <ul className='hidden md:flex '>
+      <ul className='hidden md:flex md:items-center '>
         {navItems.map(item => (
           <li
             key={item.id}
