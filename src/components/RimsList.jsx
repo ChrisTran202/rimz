@@ -101,7 +101,7 @@ function  RimsList() {
             <img src={rim.img} alt={rim.title} className='h-[vh] w-[30vw] flex justify-center '/>
             <h1 className='text-[1.3rem] md:text-[1.8rem] tracking-tighter md:tracking-normal'>{rim.title}</h1>
               <div className='flex flex-col items-center'>
-                <h1 className='font-[SchibstedGrotesk] weight-bold text-[.7rem] md:text-[.8rem] tracking-tighter md:tracking-normal w-[20vw]'>{rim.description}</h1>
+                <h1 className='font-[SchibstedGrotesk] weight-bold text-[.6rem] md:text-[.8rem] tracking-[.02rem] md:tracking-normal w-[20vw]'>{rim.description}</h1>
               </div>
               <div>
                 <select>
