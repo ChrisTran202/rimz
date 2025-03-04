@@ -94,24 +94,26 @@ function  RimsList() {
           Beauty is in the eye of the beholder!
         </p>
       </div>
-      <div className='bg-[rgb(255,255,255)] w-[70vw] rounded-2xl pt-5 border-red-900 border-2  '>
+      <div className='bg-[rgb(255,255,255)] w-[80vw] rounded-2xl pt-5 border-red-900 border-2  '>
         <div className=' flex-col grid grid-cols-2 sm:grid-cols-3 gap-4 p-5 pt-10   justify-center content-center '>
           { RimsImages.map((rim) => (
-          <div key={rim.id} className=' flex flex-col text-center contents-center  text-xl font-semibold hover:scale-110 transition-all duration-500 ease-out cursor-pointer '>
-            <img src={rim.img} alt={rim.title} className='h-[vh] w-[30vw] flex justify-center '/>
-            <h1 className='text-[1.3rem] md:text-[1.8rem] tracking-tighter md:tracking-normal'>{rim.title}</h1>
-              <div className='flex flex-col items-center'>
-                <h1 className='font-[SchibstedGrotesk] weight-bold text-[.6rem] md:text-[.8rem] tracking-[.02rem] md:tracking-normal w-[20vw]'>{rim.description}</h1>
+          <div key={rim.id} className=' rounded-2xl flex flex-col text-center contents-center  text-xl font-semibold hover:bg-[#8c8c8c] hover:scale-110 transition-all duration-500 ease-out cursor-pointer '>
+            <img src={rim.img} alt={rim.title} className='h-[vh] w-[30vw]flex justify-center '/>
+            <h1 className='text-[1.3rem] md:text-[1.8rem] pt-1 md:pt-3 tracking-tighter md:tracking-normal'>{rim.title}</h1>
+              
+                <div className='flex flex-col items-center'>
+                  <h1 className=' font-[SchibstedGrotesk] weight-bold  text-[.6rem] md:text-[.8rem] tracking-[.02rem] md:tracking-normal w-[20vw] md:w-[23vw] m-5'>{rim.description}</h1>
+                </div>
+                <div>
+                  <select>
+                    {rim.sizes.map((size) => (
+                      <option className='weight-light' key={size}>{size}</option>
+                    ))}
+                  </select>
+                  <button className='background-[#000000] text-[#7d1e1c] text-sm md:text-[1.3rem] p-2 rounded-md'>Add To Cart</button>
+                </div>
               </div>
-              <div>
-                <select>
-                  {rim.sizes.map((size) => (
-                    <option className='weight-light' key={size}>{size}</option>
-                  ))}
-                </select>
-                <button className='background-[#000000] text-[#7d1e1c] text-sm md:text-[1.3rem] p-2 rounded-md'>Add To Cart</button>
-              </div>
-          </div>
+          
         )) }
         </div>
       </div>
