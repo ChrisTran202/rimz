@@ -88,24 +88,28 @@ export const RimsImages = [
 function  RimsList() {
 
   return (
-    <div className=' flex flex-col items-center  mt-[3rem] md:mt-[8rem] lg:mt-[20rem] p-10'>
-      <p className='text-[#ffffff] text-[1.8rem] md:text-4xl '>
-          Beauty is in the eye of the beholder
+    <div className=' flex flex-col items-center  mt-[3rem] md:mt-[8rem] lg:mt-[20rem] md:p-10'>
+      <div className='margin'>
+        <p className='text-[#ffffff] text-[1.3rem] md:text-5xl lg:text-7xl pb-10 md:pb-[20vh] '>
+          Beauty is in the eye of the beholder!
         </p>
-      <div className='bg-[rgb(255,255,255)] w-[70vw] rounded-2xl pt-5 border-red-900 border-2 '>
+      </div>
+      <div className='bg-[rgb(255,255,255)] w-[70vw] rounded-2xl pt-5 border-red-900 border-2  '>
         <div className=' flex-col grid grid-cols-2 sm:grid-cols-3 gap-4 p-5 pt-10   justify-center content-center '>
           { RimsImages.map((rim) => (
           <div key={rim.id} className=' flex flex-col text-center contents-center  text-xl font-semibold hover:scale-110 transition-all duration-500 ease-out cursor-pointer '>
             <img src={rim.img} alt={rim.title} className='h-[vh] w-[30vw] flex justify-center '/>
-            <h1 className='text-[1.5rem] md:text-[1.8rem]'>{rim.title}</h1>
-            <h1 className='font-[roboto] weight-bold text-[.8rem] md:text-[1rem]'>{rim.description}</h1>
+            <h1 className='text-[1.3rem] md:text-[1.8rem] tracking-tighter md:tracking-normal'>{rim.title}</h1>
+              <div className='flex flex-col items-center'>
+                <h1 className='font-[SchibstedGrotesk] weight-bold text-[.7rem] md:text-[.8rem] tracking-tighter md:tracking-normal w-[20vw]'>{rim.description}</h1>
+              </div>
               <div>
                 <select>
                   {rim.sizes.map((size) => (
                     <option className='weight-light' key={size}>{size}</option>
                   ))}
                 </select>
-                <button className='background-[#000000] text-[#7d1e1c] p-2 rounded-md'>Add To Cart</button>
+                <button className='background-[#000000] text-[#7d1e1c] text-sm md:text-[1.3rem] p-2 rounded-md'>Add To Cart</button>
               </div>
           </div>
         )) }
