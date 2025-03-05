@@ -145,7 +145,7 @@ function  RimsList() {
                 <div>
                   <select className='border-2 border-[#000000] rounded-md w-auto text-[.8rem] ' >
                     {rim.sizes.map((s) => (
-                      <option className=' weight-light ' key={s.size && s.pricePerRim}>{s.size} - ${s.pricePerRim}</option>
+                      <option className=' weight-light ' key={s.size && s.pricePerRim}>{s.size} -  ${s.pricePerRim}/rim</option>
                     ))}
                   </select>
                   <button  className='tracking-[.01rem] text-[#7d1e1c] text-[13px] md:text-[1.3rem] p-2 rounded-md w-[13vw]'>Add To Cart</button>
