@@ -19,7 +19,10 @@ function App() {
       {/* <BgVideo /> */}
       
         <Routes>
-          <Route path="/" element={<div><BgVideo /><RimsListHome/></div>} />
+          <Route path="/" element={
+            <div><BgVideo />
+                 <RimsListHome />
+            </div>} />
           
           <Route path="/shop" element={ <div> <RimsListShop /></div> } /> 
           {/* <Route path="/cart" element={<CartPage />} />   */}
