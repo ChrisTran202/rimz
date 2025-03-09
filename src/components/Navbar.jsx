@@ -1,6 +1,8 @@
 import logo from '../assets/images/wheellogo.png'
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import CartIcon from '../features/cart/CartIcon.jsx';
 const Navbar = () => {
 
   // State to manage the navbar's visibility
@@ -12,28 +14,37 @@ const Navbar = () => {
 
   // Array containing navigation items
   const navItems = [
-    { id: 1, text: 'Home'},
-    { id: 1, text: 'Shop'},
-    { id: 1, text: 'Contact'},
+    { id: 1, text: 'Home' , to: '/'},
+    { id: 2, text: 'Shop' , to: '/shop'},
+    { id: 3, text: 'Contact ' , to: '/contact'},
     
   ];
 
   return (
-    <div className='bg-[RGBA(0,0,0,.40)] flex justify-between items-center h-22 max-auto mx-auto px-4 text-white z-30 sticky top-0  '>
+    
+    <div className='bg-[RGBA(0,0,0,.40)] flex justify-between items-center h-22 max-auto mx-auto px-4 text-white z-30 sticky top-0    '>
       {/* Logo */}
-      <h1 className='w-[30vw] md:w-[15vw] '><img src={logo} alt="logo" /></h1>
+      <div className='w-[50vw]'>
+        <h1 className='w-[30vw] md:w-[20vw] '><img src={logo} alt="logo" /></h1>
+      </div>
 
       {/* Desktop Navigation */}
-      <ul className='hidden md:flex md:items-center '>
+      <nav className='hidden md:flex md:items-center '>
         {navItems.map(item => (
-          <li
-            key={item.id}
+          <Link to={item.to}
+            key={item.id} 
             className='p-4 hover:bg-[#ff4444] rounded-xl m-2 cursor-pointer duration-400 hover:scale-200 ease-in-out text-[1.8rem] xl:text-5xl font-bold text-red-900 hover:text-white'
           >
             {item.text}
-          </li>
+          </Link>
         ))}
-      </ul>
+      </nav>
+
+      {/* Cart Icon */}
+      <div>
+        <CartIcon />
+      </div>
+      
 
       {/* Mobile Navigation Icon */}
       <div onClick={handleNav} className='block md:hidden bg-[#ff454570] p-4 rounded-xl  items-center justify-center  '>
@@ -53,15 +64,17 @@ const Navbar = () => {
 
         {/* Mobile Navigation Items */}
         {navItems.map(item => (
-          <li
+          <Link to={item.to}
             key={item.id}
+            
             className='p-4 border-b rounded-xl text-[30px]  text-red-900 hover:bg-[#df0000] duration-300 hover:text-white cursor-pointer border-gray-600'
           >
             {item.text}
-          </li>
+          </Link>
         ))}
       </ul>
     </div>
+    
   );
 };
 

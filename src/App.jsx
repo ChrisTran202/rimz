@@ -1,18 +1,33 @@
 import './App.css'
-import Bgvideo from './components/Bgvideo'
+import { Provider } from 'react-redux';
+import  store  from './store/store.js';
+import {  Routes, Route } from 'react-router-dom';
+import BgVideo from './components/BgVideo'
 import Navbar from './components/Navbar'
-import RimsList from './components/RimsList'
+import RimsListShop from './components/RimsListShop'
+// import CartPage from './features/cart/CartPage.jsx';
+import RimsListHome from './components/RimsListHome.jsx';
 
 
 function App() {
-  
-
   return (
     <>
-    <Navbar/>
-    <Bgvideo />
-    <RimsList />
-    
+    <Provider store={store}>
+      <Navbar/>
+      
+      
+      {/* <BgVideo /> */}
+      
+        <Routes>
+          <Route path="/" element={<div><BgVideo /><RimsListHome/></div>} />
+          
+          <Route path="/shop" element={ <div> <RimsListShop /></div> } /> 
+          {/* <Route path="/cart" element={<CartPage />} />   */}
+
+        </Routes>
+        
+      
+    </Provider>
     </>
   )
 }
