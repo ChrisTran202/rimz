@@ -3,7 +3,7 @@ import { Provider } from 'react-redux';
 import  store  from './store/store.js';
 import {  Routes, Route } from 'react-router-dom';
 import BgVideo from './components/BgVideo';
-import Navbar from './components/Navbar'
+import Navbar from './components/Navbar';
 import RimsListShop from './components/RimsListShop'
 // import CartPage from './features/cart/CartPage.jsx';
 import RimsListHome from './components/RimsListHome.jsx';
