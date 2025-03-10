@@ -25,3 +25,16 @@ li {
   font-weight: 400;
   font-style: normal;
 }
+
+.overflow-container {
+  flex-wrap: wrap;
+  overflow-x: scroll;
+}
+
+.overflow-container > div {
+  flex-basis: 50vw;
+}
+
+.overflow-container > div:nth-child(n+2) {
+  margin-top: 20px;
+}

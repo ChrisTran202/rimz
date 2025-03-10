@@ -10,7 +10,8 @@ import img10 from'../assets/images/10.jpg'
 
 export const rimsImages = [
   {
-    title: 'RAYS - CE28N-plus',
+    title: 'RAYS',
+    name: 'CE28N-plus',
     id: 1,
     img: img1,
     description: 'Lightweight forged monoblock wheel with a classic 10-spoke design for optimal strength and weight reduction.',
@@ -23,7 +24,8 @@ export const rimsImages = [
     ]
   },
   {
-    title: 'KANSEI - KNP',
+    title: 'KANSEI ',
+    name: 'KNP',
     id: 2,
     img: img2,
     description: 'A timeless 5-spoke wheel with a deep concave design and a durable flow-formed construction.',
@@ -34,7 +36,8 @@ export const rimsImages = [
     ]
   },
   {
-    title: 'KANSEI - CORSA',
+    title: 'KANSEI ',
+    name: 'CORSA',
     id: 3,
     img: img3,
     description: 'Inspired by motorsports, the Corsa features a split 6-spoke design with enhanced strength and lightweight performance.',
@@ -45,7 +48,8 @@ export const rimsImages = [
     ]
   },
   {
-    title: 'KANSEI - ROKU',
+    title: 'KANSEI ',
+    name: 'ROKU',
     id: 4,
     img: img4,
     description: 'A six-spoke wheel designed for aggressive fitment and strength while maintaining lightweight performance.',
@@ -55,7 +59,8 @@ export const rimsImages = [
     ]
   },
  {
-    title: 'RAYS - NE24 club sport',
+    title: 'RAYS ',
+    name: 'NE24 club sport',
     id: 6,
     img: img6,
     description: 'A modern motorsports wheel with an intricate multi-spoke pattern for maximum weight savings and rigidity.',
@@ -66,7 +71,8 @@ export const rimsImages = [
     ]
   },
   {
-    title: 'RAYS - TE37 SAGA S-plus',
+    title: 'RAYS',
+    name: 'TE37 SAGA S-plus',
     id: 7,
     img: img7,
     description: 'An evolution of the iconic TE37, featuring improved rigidity and a revised spoke profile for modern vehicles.',
@@ -77,7 +83,8 @@ export const rimsImages = [
     ]
   },
   {
-    title: 'RAYS - TE37 ultra X',
+    title: 'RAYS ',
+    name: 'TE37 ultra X',
     id: 8,
     img: img8,
     description: 'Designed for high-performance vehicles, the ultra X enhances the classic TE37 with a stronger and lighter structure.',
@@ -87,7 +94,8 @@ export const rimsImages = [
     ]
   },
   {
-    title: 'RAYS - TE37 ultra LARGE P.C.D. M-SPEC',
+    title: 'RAYS',
+    name: 'TE37 ultra LARGE P.C.D. M-SPEC',
     id: 9,
     img: img9,
     description: 'Specially designed for larger PCD vehicles, maintaining the legendary TE37 strength and performance.',
@@ -97,7 +105,8 @@ export const rimsImages = [
     ]
   },
   {
-    title: 'RAYS - ZE40',
+    title: 'RAYS',
+    name: 'ZE40',
     id: 10,
     img: img10,
     description: 'A multi-spoke performance wheel with improved spoke thickness and enhanced weight distribution.',
