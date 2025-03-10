@@ -15,14 +15,15 @@ function App() {
     <Provider store={store}>
       <Navbar/>
       
-      
       {/* <BgVideo /> */}
       
         <Routes>
           <Route path="/" element={
-            <div><BgVideo />
-                 <RimsListHome />
-            </div>} />
+            <div>
+              <BgVideo />
+                <RimsListHome />
+            </div>}
+          />
           
           <Route path="/shop" element={ <div> <RimsListShop /></div> } /> 
           {/* <Route path="/cart" element={<CartPage />} />   */}
