@@ -18,7 +18,7 @@ const  RimsListHome= () => {
     //   ))}
     // </div>
     <div className='flex flex-col items-center '>
-      <div className=' text-white w-[50vw] mt-[5rem] lg:mt-[5rem] xl:mt-[12rem] text-[1.5rem] md:text-[2rem] lg:text-[3rem] flex flex-col items-center'>
+      <div className=' text-white w-[50vw] mt-[5rem] lg:mt-[5rem] xl:mt-[25vh] text-[1.5rem] md:text-[2rem] lg:text-[3rem] flex flex-col items-center'>
         <h1> "If you can leave two black stripes from the exit of one corner to the braking zone of the next, you have enough horsepower."</h1>
         <h1> Mark Donohue</h1>
       </div>
