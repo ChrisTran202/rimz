@@ -37,6 +37,10 @@
     "tailwindcss-textshadow": "^2.1.3",
     "typescript": "^5.8.2",
     "vite": "^6.2.1"
+  },
+  "overrides": {
+  "eslint-plugin-react-hooks": {
+    "eslint": "^9.22.0"
   }
-  
+}
 }
