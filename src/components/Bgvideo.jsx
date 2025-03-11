@@ -1,6 +1,6 @@
 import Clip from '../assets/clips/rimzclipz-2.mp4'
 
-const bgVideo = () => {
+const BgVideo = () => {
   return (
     
       <div className=" flex flex-col items-center justify-center overflow-hidden  h-[30vh] md:h-[40vh]  lg:h-[70vh] ">
@@ -14,4 +14,4 @@ const bgVideo = () => {
   )
 }
 
-export default bgVideo
+export default BgVideo
