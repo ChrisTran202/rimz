@@ -18,8 +18,12 @@ function App() {
         <Routes>
           <Route path="/" element={
             <div>
+              <div>
                 <BgVideo />
+              </div>
+              <div>
                 <RimsListHome />
+              </div>
             </div>}
           />
           
