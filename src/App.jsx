@@ -2,7 +2,7 @@ import './App.css'
 import { Provider } from 'react-redux';
 import  store  from './store/store.js';
 import {  Routes, Route } from 'react-router-dom';
-import { BgVideo } from './components/BgVideo';
+import { BgVideoClip } from './components/BgVideoClip.jsx';
 import Navbar from './components/Navbar';
 import RimsListShop from './components/RimsListShop'
 // import CartPage from './features/cart/CartPage.jsx';
@@ -19,7 +19,7 @@ function App() {
           <Route path="/" element={
             <div>
               <div>
-                <BgVideo />
+                <BgVideoClip />
                 
               </div>
               <div>
