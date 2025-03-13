@@ -1,6 +1,8 @@
 import { useDispatch } from 'react-redux';
 import { addItem } from '../../features/cart/cartSlice';
 import PropTypes from 'prop-types';
+
+
 const Product = ({ product }) => {
   const dispatch = useDispatch();
 
@@ -9,7 +11,7 @@ const Product = ({ product }) => {
     dispatch(addItem(product));
     Product.propTypes = {
     product: PropTypes.object.isRequired,
-  };
+    };
   };
   
 

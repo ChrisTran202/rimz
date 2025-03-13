@@ -1,10 +1,20 @@
+import { rimsData } from '../data/rimsData'
+import { useDispatch } from 'react-redux';
+import { addItem } from '../features/cart/cartSlice';
+import PropTypes from 'prop-types';
 
-import { rimsImages } from '../data/rimsData'
 
 
+const  RimsListShop = ({RimsListShop}) => {
 
-
-const  RimsListShop = () => {
+  const dispatch = useDispatch();
+     const handleAddToCart = () => {
+         // Dispatch the rim product object to be added to the cart.
+         dispatch(addItem(RimsListShop));
+         RimsListShop.propTypes = {
+         product: PropTypes.object.isRequired,
+         };
+       };
 
   return (
     <div className=' flex flex-col items-center  mt-[3rem] md:mt-[8rem] lg:mt-[20rem] md:p-10'>
@@ -16,7 +26,7 @@ const  RimsListShop = () => {
       
       <div className='bg-[rgb(255,255,255)] w-[80vw] rounded-2xl pt-5 border-red-900 border-2  '>
         <div className=' flex-col grid grid-cols-2 sm:grid-cols-3 gap-4 p-5 pt-10   justify-center content-center '>
-          { rimsImages.map((rim) => (
+          { rimsData.map((rim) => (
           <div key={rim.id} className='m-1 md:m-2 rounded-2xl flex flex-col text-center contents-center  text-xl font-semibold  hover:bg-[#8c8c8c] hover:scale-110 transition-all duration-500 ease-out cursor-pointer '>
             <img src={rim.img} alt={rim.title} className='h-[vh] w-[30vw]flex justify-center '/>
             <h1 className='text-[1.3rem] md:text-[1.8rem] pt-1 md:pt-3 tracking-tighter md:tracking-normal'>{rim.title}</h1>
@@ -30,7 +40,7 @@ const  RimsListShop = () => {
                       <option className=' weight-light ' key={s.size && s.pricePerRim}>{s.size} -  ${s.pricePerRim}/rim</option>
                     ))}
                   </select>
-                  <button  className='tracking-[.01rem] text-[#7d1e1c] text-[13px] md:text-[1.3rem] p-2 rounded-md w-[13vw]'>Add To Cart</button>
+                  <button onClick={handleAddToCart}  className='tracking-[.01rem] text-[#7d1e1c] text-[13px] md:text-[1.3rem] p-2 rounded-md w-[13vw]'>Add To Cart</button>
                 </div>
               </div>
           

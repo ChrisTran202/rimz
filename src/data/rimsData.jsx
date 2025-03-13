@@ -8,7 +8,7 @@ import img8 from '../assets/images/8.jpg'
 import img9 from '../assets/images/9.jpg'
 import img10 from'../assets/images/10.jpg'
 
-export const rimsImages = [
+export const rimsData = [
   {
     title: 'RAYS',
     name: 'CE28N-plus',

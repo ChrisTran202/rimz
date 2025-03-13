@@ -5,16 +5,18 @@ import {  Routes, Route } from 'react-router-dom';
 import { BgVideoClip } from './components/BgVideoClip.jsx';
 import Navbar from './components/Navbar';
 import RimsListShop from './components/RimsListShop'
-// import CartPage from './features/cart/CartPage.jsx';
 import RimsListHome from './components/RimsListHome.jsx';
+import CartIcon from './features/cart/CartIcon.jsx';
+import CartPage from './features/cart/CartPage.jsx';
 
 
 function App() {
   return (
     <>
     <Provider store={store}>
-      <Navbar/>
-      
+        <Navbar />
+           
+
         <Routes>
           <Route path="/" element={
             <div>
@@ -29,7 +31,8 @@ function App() {
           />
           
           <Route path="/shop" element={ <div> <RimsListShop /></div> } /> 
-          {/* <Route path="/cart" element={<CartPage />} />   */}
+          <Route path="/cartpage" element={ <div> <CartPage /></div> } />
+            
 
         </Routes>
         

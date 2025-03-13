@@ -1,27 +1,26 @@
-// src/features/cart/CartPage.jsx
-
 import { useSelector, useDispatch } from 'react-redux';
 import { removeItem } from './cartSlice';
-
+import { rimsData } from '../../data/rimsData';
 const CartPage = () => {
   const items = useSelector(state => state.cart.items);
   const dispatch = useDispatch();
-
+console.log(items);
   const handleRemove = id => {
     dispatch(removeItem(id));
   };
 
   return (
-    <div className="cart-page">
+    <div className="">
       <h2>Your Cart</h2>
       {items.length === 0 ? (
         <p>Your cart is empty.</p>
       ) : (
         <ul>
-          {items.map(item => (
-            <li key={item.id}>
-              <h4>{item.name}</h4>
-              <p>${item.price.toFixed(2)}</p>
+          {rimsData.map((data) => (
+            <li key={data.id}>
+              <h3>{data.title}</h3>
+              <h4>{data.name}</h4>
+              <p>${data.price}</p>
               <button onClick={() => handleRemove(item.id)}>Remove</button>
             </li>
           ))}
@@ -29,6 +28,6 @@ const CartPage = () => {
       )}
     </div>
   );
-};
+}
 
 export default CartPage;

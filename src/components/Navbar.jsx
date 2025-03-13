@@ -3,6 +3,7 @@ import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import CartIcon from '../features/cart/CartIcon.jsx';
+import CartPage from '../features/cart/CartPage.jsx';
 const Navbar = () => {
 
   // State to manage the navbar's visibility
@@ -20,12 +21,18 @@ const Navbar = () => {
     
   ];
 
+  const [cartpage, setCartpage] = useState(false);
+
+  const handleCartPage = () => {
+    setCartpage(!cartpage);
+  };
+
   return (
     
     <div className='bg-[RGBA(0,0,0,.40)] flex justify-between items-center h-22 max-auto mx-auto px-4 text-white z-30 sticky top-0    '>
       {/* Logo */}
       <div className='w-[50vw]'>
-        <h1 className='w-[30vw] md:w-[20vw] '><img src={logo} alt="logo" /></h1>
+        <h1 className='w-[13vw] md:w-[15vw] '><img src={logo} alt="logo" /></h1>
       </div>
 
       {/* Desktop Navigation */}
@@ -33,7 +40,7 @@ const Navbar = () => {
         {navItems.map(item => (
           <Link to={item.to}
             key={item.id} 
-            className='p-4 hover:bg-[#ff4444] rounded-xl m-2 cursor-pointer duration-400 hover:scale-200 ease-in-out text-[1.8rem] xl:text-5xl font-bold text-red-900 hover:text-white'
+            className='p-4 hover:bg-[#ff4444] rounded-xl m-2 cursor-pointer duration-400 hover:scale-200 ease-in-out text-[1.8rem] xl:text-4xl font-bold text-red-900 hover:text-white'
           >
             {item.text}
           </Link>
@@ -41,9 +48,11 @@ const Navbar = () => {
       </nav>
 
       {/* Cart Icon */}
-      <div>
-        <CartIcon />
-      </div>
+      
+        <CartIcon onClick={handleCartPage} />
+        
+        {cartpage && <CartPage onClose={handleCartPage} />}
+          
       
 
       {/* Mobile Navigation Icon */}
