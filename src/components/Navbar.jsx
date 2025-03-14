@@ -12,6 +12,11 @@ const Navbar = () => {
   const handleNav = () => {
     setNav(!nav);
   }
+  const [handleCartPage, setHandleCartPage] = useState(false);
+  const openCartPage = () => {
+      setHandleCartPage(!handleCartPage); 
+    };
+
 
   // Array containing navigation items
   const navItems = [
@@ -21,11 +26,7 @@ const Navbar = () => {
     
   ];
 
-  const [cartpage, setCartpage] = useState(false);
-
-  const handleCartPage = () => {
-    setCartpage(!cartpage);
-  };
+  
 
   return (
     
@@ -48,10 +49,12 @@ const Navbar = () => {
       </nav>
 
       {/* Cart Icon */}
-      
-        <CartIcon onClick={handleCartPage} />
+      <Link to = '/cartPage'>
+        <CartIcon openCartPage={openCartPage} />
+      </Link>
+
         
-        {cartpage && <CartPage onClose={handleCartPage} />}
+        
           
       
 

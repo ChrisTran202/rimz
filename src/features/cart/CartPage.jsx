@@ -1,31 +1,40 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { removeItem } from './cartSlice';
 import { rimsData } from '../../data/rimsData';
+import Header from '../../components/cart/Header'; 
+
 const CartPage = () => {
-  const items = useSelector(state => state.cart.items);
-  const dispatch = useDispatch();
-console.log(items);
+
+  const items = useSelector((state) => state.cart.data);
+
+  const dispatch = useDispatch( );
+
   const handleRemove = id => {
     dispatch(removeItem(id));
   };
 
   return (
-    <div className="">
-      <h2>Your Cart</h2>
-      {items.length === 0 ? (
-        <p>Your cart is empty.</p>
-      ) : (
-        <ul>
-          {rimsData.map((data) => (
-            <li key={data.id}>
-              <h3>{data.title}</h3>
-              <h4>{data.name}</h4>
-              <p>${data.price}</p>
-              <button onClick={() => handleRemove(item.id)}>Remove</button>
-            </li>
-          ))}
-        </ul>
-      )}
+    
+    <div className="text-white  ">
+      <Header className={""} />
+      <div className="flex flex-col items-center text-[1.5rem] ">
+        <h2>Cart</h2>
+        {items.length === 0 ? (
+          <p>Your cart is empty.</p>
+        ) : (
+          <ul>
+
+            { rimsData.map((items) => (
+              <li key={items.id}>
+                <h3>{items.title}</h3>
+                <h4>{items.name}</h4>
+                <p>${items.price}</p>
+                <button onClick={() => handleRemove(items.id)}>Remove</button>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
     </div>
   );
 }

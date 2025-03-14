@@ -4,16 +4,10 @@ import CartIcon from '../../features/cart/CartIcon';
 
 const Header = () => {
   return (
-    <header className="header">
-      <Link to="/">
-        <h1>My Shop</h1>
+    <header className="flex flex-col items-center justify-center m-5 ">
+      <Link to="/shop">
+        <h1 className='text-[2rem] md:text-[5rem]'>Shopping Cart</h1>
       </Link>
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/cart">
-          <CartIcon />
-        </Link>
-      </nav>
     </header>
   );
 };

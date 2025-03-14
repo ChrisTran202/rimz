@@ -31,7 +31,7 @@ function App() {
           />
           
           <Route path="/shop" element={ <div> <RimsListShop /></div> } /> 
-          <Route path="/cartpage" element={ <div> <CartPage /></div> } />
+          <Route path="/cartPage" element={ <div> <CartPage /></div> } />
             
 
         </Routes>
