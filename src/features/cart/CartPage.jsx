@@ -24,7 +24,7 @@ const CartPage = () => {
         ) : (
           <ul>
 
-            { rimsData.map((items) => (
+            { items.map((items) => (
               <li key={items.id}>
                 <h3>{items.title}</h3>
                 <h4>{items.name}</h4>

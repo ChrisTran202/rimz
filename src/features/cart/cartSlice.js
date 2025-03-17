@@ -20,19 +20,9 @@ const cartSlice = createSlice({
       state.data = state.items.filter(data => data.id !== id);
       state.totalQuantity = Math.max(0, state.totalQuantity - 1);
     },
-    addToCart: (state, action) => {
-      const item = action.payload;
-      const existingItem = state.items.find((i) => i.id === item.id);
-      if (existingItem) {
-        existingItem.quantity += 1;
-      } else {
-        state.items.push({ ...item, quantity: 1 });
-      }
-    },
     
   },
-},
-);
+},);
 
 
 
