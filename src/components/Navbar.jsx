@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import CartIcon from '../features/cart/CartIcon.jsx';
 import CartPage from '../features/cart/CartPage.jsx';
+
 const Navbar = () => {
 
   // State to manage the navbar's visibility
@@ -22,7 +23,6 @@ const Navbar = () => {
   const navItems = [
     { id: 1, text: 'Home' , to: '/'},
     { id: 2, text: 'Shop' , to: '/shop'},
-    { id: 3, text: 'Contact ' , to: '/contact'},
     
   ];
 
@@ -66,9 +66,8 @@ const Navbar = () => {
       {/* Mobile Navigation Menu */}
       <ul
         className={
-          nav
-            ? 'fixed md:hidden left-0 top-0 w-[60%] h-full border-r border-r-gray-900 bg-[#000300] ease-in-out duration-500'
-            : ' ease-in-out w-[60%] duration-500 fixed top-0 bottom-0 left-[-100%]'
+          nav ? 'fixed md:hidden left-0 top-0 w-[60%] h-full border-r border-r-gray-900 bg-[#000300] ease-in-out duration-500'
+            : 'ease-in-out w-[60%] duration-500 fixed top-0 bottom-0 left-[-100%]'
         }
       >
         {/* Mobile Logo */}

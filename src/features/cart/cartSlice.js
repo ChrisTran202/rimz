@@ -8,7 +8,6 @@ const initialState = {
 const cartSlice = createSlice({
   name: 'cart',
   initialState,
-  items: [],
   reducers: {
     addItem: (state, action) => {
       const newItem = action.payload;
@@ -17,8 +16,9 @@ const cartSlice = createSlice({
     },
     removeItem: (state, action) => {
       const id = action.payload;
-      state.data = state.items.filter(data => data.id !== id);
+      state.data = state.data.filter((item)  => item.id !== id);
       state.totalQuantity = Math.max(0, state.totalQuantity - 1);
+      return state;
     },
     
   },

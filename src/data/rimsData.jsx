@@ -16,58 +16,58 @@ export const rimsData = [
     img: img1,
     description: 'Lightweight forged monoblock wheel with a classic 10-spoke design for optimal strength and weight reduction.',
     sizes: [
-      { size: '15x6.5', pricePerRim: 400 },
-      { size: '16x7', pricePerRim: 450 },
-      { size: '17x8', pricePerRim: 500 },
-      { size: '18x9', pricePerRim: 600 },
-      { size: '19x9.5', pricePerRim: 700 }
+      { id: 101, size: '15x6.5', pricePerRim: 400 },
+      { id: 102, size: '16x7', pricePerRim: 450 },
+      { id: 103, size: '17x8', pricePerRim: 500 },
+      { id: 104, size: '18x9', pricePerRim: 600 },
+      { id: 105, size: '19x9.5', pricePerRim: 700 }
     ]
   },
   {
-    title: 'KANSEI ',
+    title: 'KANSEI',
     name: 'KNP',
     id: 2,
     img: img2,
     description: 'A timeless 5-spoke wheel with a deep concave design and a durable flow-formed construction.',
     sizes: [
-      { size: '17x8', pricePerRim: 480 },
-      { size: '18x9', pricePerRim: 580 },
-      { size: '19x10.5', pricePerRim: 750 }
+      { id: 201, size: '17x8', pricePerRim: 480 },
+      { id: 202, size: '18x9', pricePerRim: 580 },
+      { id: 203, size: '19x10.5', pricePerRim: 750 }
     ]
   },
   {
-    title: 'KANSEI ',
+    title: 'KANSEI',
     name: 'CORSA',
     id: 3,
     img: img3,
     description: 'Inspired by motorsports, the Corsa features a split 6-spoke design with enhanced strength and lightweight performance.',
     sizes: [
-      { size: '17x9', pricePerRim: 500 },
-      { size: '18x9.5', pricePerRim: 620 },
-      { size: '19x10', pricePerRim: 750 }
+      { id: 301, size: '17x9', pricePerRim: 500 },
+      { id: 302, size: '18x9.5', pricePerRim: 620 },
+      { id: 303, size: '19x10', pricePerRim: 750 }
     ]
   },
   {
-    title: 'KANSEI ',
+    title: 'KANSEI',
     name: 'ROKU',
     id: 4,
     img: img4,
     description: 'A six-spoke wheel designed for aggressive fitment and strength while maintaining lightweight performance.',
     sizes: [
-      { size: '17x9', pricePerRim: 520 },
-      { size: '18x9.5', pricePerRim: 630 }
+      { id: 401, size: '17x9', pricePerRim: 520 },
+      { id: 402, size: '18x9.5', pricePerRim: 630 }
     ]
   },
- {
-    title: 'RAYS ',
+  {
+    title: 'RAYS',
     name: 'NE24 club sport',
     id: 6,
     img: img6,
     description: 'A modern motorsports wheel with an intricate multi-spoke pattern for maximum weight savings and rigidity.',
     sizes: [
-      { size: '18x9', pricePerRim: 640 },
-      { size: '19x9.5', pricePerRim: 760 },
-      { size: '19x10', pricePerRim: 780 }
+      { id: 601, size: '18x9', pricePerRim: 640 },
+      { id: 602, size: '19x9.5', pricePerRim: 760 },
+      { id: 603, size: '19x10', pricePerRim: 780 }
     ]
   },
   {
@@ -77,20 +77,20 @@ export const rimsData = [
     img: img7,
     description: 'An evolution of the iconic TE37, featuring improved rigidity and a revised spoke profile for modern vehicles.',
     sizes: [
-      { size: '17x9', pricePerRim: 550 },
-      { size: '18x9.5', pricePerRim: 670 },
-      { size: '19x10', pricePerRim: 800 }
+      { id: 701, size: '17x9', pricePerRim: 550 },
+      { id: 702, size: '18x9.5', pricePerRim: 670 },
+      { id: 703, size: '19x10', pricePerRim: 800 }
     ]
   },
   {
-    title: 'RAYS ',
+    title: 'RAYS',
     name: 'TE37 ultra X',
     id: 8,
     img: img8,
     description: 'Designed for high-performance vehicles, the ultra X enhances the classic TE37 with a stronger and lighter structure.',
     sizes: [
-      { size: '18x9.5', pricePerRim: 690 },
-      { size: '19x10.5', pricePerRim: 850 }
+      { id: 801, size: '18x9.5', pricePerRim: 690 },
+      { id: 802, size: '19x10.5', pricePerRim: 850 }
     ]
   },
   {
@@ -100,8 +100,8 @@ export const rimsData = [
     img: img9,
     description: 'Specially designed for larger PCD vehicles, maintaining the legendary TE37 strength and performance.',
     sizes: [
-      { size: '18x9.5', pricePerRim: 710 },
-      { size: '20x10.5', pricePerRim: 900 }
+      { id: 901, size: '18x9.5', pricePerRim: 710 },
+      { id: 902, size: '20x10.5', pricePerRim: 900 }
     ]
   },
   {
@@ -111,8 +111,8 @@ export const rimsData = [
     img: img10,
     description: 'A multi-spoke performance wheel with improved spoke thickness and enhanced weight distribution.',
     sizes: [
-      { size: '18x9', pricePerRim: 630 },
-      { size: '19x10', pricePerRim: 780 }
+      { id: 1001, size: '18x9', pricePerRim: 630 },
+      { id: 1002, size: '19x10', pricePerRim: 780 }
     ]
   }
 ];

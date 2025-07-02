@@ -1,3 +1,4 @@
+import React, { useState } from 'react'
 import { rimsData } from '../data/rimsData'
 import { useDispatch } from 'react-redux';
 import { addItem, addToCart, } from '../features/cart/cartSlice';
@@ -5,14 +6,21 @@ import PropTypes from 'prop-types';
 
 
 
+
 const  RimsListShop = () => {
+  const [selectedSize, setSelectedSize] = useState('');
 
   const dispatch = useDispatch();
   
+  
      const handleAddToCart = (rim, size ) => {
-      const selectedPrice = rim.sizes.find((s) => s.size === size).pricePerRim;
-      const itemToAdd = { ...rim, size, price: selectedPrice };
-         dispatch(addItem(itemToAdd));
+      const selectedSize = rim.sizes.find((s) => s.size === size);
+      const itemToAdd = { 
+        ...rim, 
+        size: selectedSize.size, 
+        price: selectedSize.pricePerRim,
+       };
+          dispatch(addItem({ ...itemToAdd, quantity: 1 }));
         };
 
   return (
@@ -34,18 +42,26 @@ const  RimsListShop = () => {
                   <h1 className=' font-[SchibstedGrotesk] weight-bold  text-[.6rem] md:text-[.8rem] tracking-[.02rem] md:tracking-normal w-[20vw] md:w-[23vw] m-5'>{rim.description}</h1>
                 </div>
                 <div>
-                  {/* <select onChange={(e) => handleAddToCart(rim, e.target.value)} className='border-2 border-[#000000] rounded-md w-auto text-[.8rem] ' >
-
+                  
+                  {/* <select>
                     {rim.sizes.map((size) => (
-                      <option className=' weight-light ' value={size.size} >{s.size} - ${s.pricePerRim}/rim</option>
+                      <option 
+                        key={size.id}
+                        value={size.size}>
+                        {size.size} - ${size.pricePerRim.toFixed(2) }
+                      </option>
                     ))}
+                    
                   </select> */}
-                  <select onChange={(e) => handleAddToCart(rim, e.target.value)}>
-                    {rim.sizes.map((size, price) => (
-                      <option value={size.size}>{size.size} - ${size.pricePerRim}</option>
-                  ))}
+                  <select value={selectedSize} onChange={(e) => setSelectedSize(e.target.value)}>
+                    {rim.sizes.map((size) => (
+                    <option key={size.id} value={size.size}>
+                      {size.size} - ${size.pricePerRim.toFixed(2)}
+                    </option>
+                     ))}
                   </select>
-                  <button onClick={() => dispatch(addItem(rim))}  className='tracking-[.01rem] text-[#7d1e1c] text-[13px] md:text-[1.3rem] p-2 rounded-md w-[13vw]'>Add To Cart</button>
+                  
+                  <button onClick={() => dispatch(addItem(rim, selectedSize.size))}  className='tracking-[.01rem] text-[#7d1e1c] text-[13px] md:text-[1.3rem] p-2 rounded-md w-[13vw]'>Add To Cart</button>
                 </div>
               </div>
           

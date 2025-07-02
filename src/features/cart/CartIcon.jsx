@@ -7,11 +7,13 @@ const CartIcon = () => {
   
 
   return (
-    <Link to='/cartPage'  className="cart-icon ">
-      <FaOpencart className='text-[#801d19]  w-[2rem] hover:scale-110 hover:text-[#ffffff]'/>
-      
-      {totalQuantity > 0 && <span className="badge">{totalQuantity}</span>}
-    </Link>
+    <div className="cart-icon ">
+      <Link to='/cartPage'  className="cart-icon ">
+        <FaOpencart className='text-[#801d19]  w-[2rem] hover:scale-110 hover:text-[#ffffff]'/>
+        
+        {totalQuantity > 0 && <span className="badge">{totalQuantity}</span>}
+      </Link>
+    </div>
   );
 };
 
