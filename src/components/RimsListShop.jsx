@@ -31,7 +31,7 @@ const  RimsListShop = () => {
         </p>
       </div>
       
-      <div className='bg-[rgb(255,255,255)] w-[80vw] rounded-2xl pt-5 border-red-900 border-2  '>
+      <div className='bg-[rgb(255,255,255)] md:w-[80vw] lg:w-[60vw] rounded-2xl pt-5 border-red-900 border-2  '>
         <div className=' flex-col grid grid-cols-2 sm:grid-cols-3 gap-4 p-5 pt-10   justify-center content-center '>
           { rimsData.map((rim) => (
           <div key={rim.id} className='m-1 md:m-2 rounded-2xl flex flex-col text-center contents-center  text-xl font-semibold  hover:bg-[#8c8c8c] hover:scale-110 transition-all duration-500 ease-out cursor-pointer '>
@@ -39,7 +39,7 @@ const  RimsListShop = () => {
             <h1 className='text-[1.3rem] md:text-[1.8rem] pt-1 md:pt-3 tracking-tighter md:tracking-normal'>{rim.title}</h1>
               <h1 className='text-[.8rem]'>{rim.name}</h1>
                 <div className='flex flex-col items-center'>
-                  <h1 className=' font-[SchibstedGrotesk] weight-bold  text-[.6rem] md:text-[.8rem] tracking-[.02rem] md:tracking-normal w-[20vw] md:w-[23vw] m-5'>{rim.description}</h1>
+                  <h1 className=' font-[SchibstedGrotesk] weight-bold  text-[.6rem] md:text-[.8rem] tracking-[.02rem] md:tracking-normal w-[12rem] md:w-[10rem] m-2'>{rim.description}</h1>
                 </div>
                 <div>
                   
